@@ -11,28 +11,35 @@ TODO what percentage passed the DC.
 
 
 const amountInput = document.getElementById('amount-input');
-const d20Btn = document.getElementById('d20-btn');
 const dcEl = document.getElementById('dc');
 const dcPassEl = document.getElementById('dc-pass-el');
 const dcPassElInitial = document.getElementById('dc-pass-el').textContent;
-const sides = document.getElementById('sides')
+const sidesEl = document.getElementById('sides')
 
 function howManyPassed(times, sides, dc) {
+    console.log(`DC: ${dc} Sides: ${sides} Number Of Rolls: ${times}`)
+    console.log(sides)
     let didPass = 0;
     let didNotPass = 0;
+    let crit = 0;
     for (let i = 0; i < times; i++) {
-        let tempNum = Math.floor(Math.random()*(sides + 1));
+        let tempNum = Math.floor(Math.random()*sides) + 1;
+        console.log(tempNum)
         if (tempNum >= dc) {
             didPass++;
+            if (tempNum == 20) {
+                crit++
+            }
         } else {
             didNotPass++;
         };
     };
     dcPassEl.textContent = dcPassElInitial + didPass
     document.getElementById('dc-fail-el').textContent = `This many failed: ${didNotPass}`
+    document.getElementById('crit-el').textContent = `This many crit: ${crit}`
 }
 
 rollAll.addEventListener('click', function() {
     // totalOfRolls(amountInput.textContent)
-    howManyPassed(amountInput.value, sides.value, dcEl.value);
+    howManyPassed(amountInput.value, sidesEl.value, dcEl.value);
 });
