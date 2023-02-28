@@ -6,6 +6,24 @@
     </head>
     <body>
         <h1 id='title'>Welcome to DnD Many Dice Roller!</h1>
+        <div id="hero">
+            <div class="container">
+                <p>How many dice?</p>
+                <input class='numInputField' id="amount-input" placeholder="_" type="number">
+            </div>
+            <div class="container">
+                <p>What type of dice? D</p>
+                <input class='numInputField' id='sides' placeholder="_" type="number">
+            </div>
+            <div class="container">
+                <p>DC?</p>
+                <input class='numInputField' id='dc' placeholder="_" type="number">
+            </div>
+            
+            <p id="dc-pass-el">This many passed: </p>
+            <p id="dc-fail-el">This many failed: </p>
+            <button id="rollAll">ROLL THE DICE!</button>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>
