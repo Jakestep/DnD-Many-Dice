@@ -28,14 +28,14 @@ function howManyPassed(times, sides, dc, modifier) {
         console.log(tempNum)
         if (tempNum + parseInt(modifier) >= dc) {
             didPass++;
-            
-        } else if (tempNum == 1) {
-            critFail ++
-        } else if (tempNum == 20) {
-            crit++
-        }
-        else {
+            if (tempNum == 20) {
+                crit++
+            }
+        } else {
             didNotPass++;
+            if (tempNum == 1) {
+                critFail ++
+            }
         };
     };
     dcPassEl.textContent = dcPassElInitial + didPass
@@ -48,3 +48,4 @@ rollAll.addEventListener('click', function() {
     // totalOfRolls(amountInput.textContent)
     howManyPassed(amountInput.value, sidesEl.value, dcEl.value, document.getElementById('mod-el').value);
 });
+
