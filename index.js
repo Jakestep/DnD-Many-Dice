@@ -15,7 +15,7 @@ const dcEl = document.getElementById('dc');
 const dcPassEl = document.getElementById('dc-pass-el');
 const dcPassElInitial = document.getElementById('dc-pass-el').textContent;
 const sidesEl = document.getElementById('sides')
-console.log(document.getElementById('mod-el.').value)
+console.log(document.getElementById('mod-el').value)
 function howManyPassed(times = 1, sides = 1, dc = 0, modifier = 0) {
     console.log(modifier)
     console.log(`DC: ${dc} Sides: ${sides} Number Of Rolls: ${times}`)
