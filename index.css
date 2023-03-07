@@ -12,6 +12,7 @@ body {
 #title {
     background-image: url('images/stars.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     padding: 7px 10px;
     box-shadow: 0 0 10px rgb(10, 108, 255);
     text-shadow: 0 0 5px black;
