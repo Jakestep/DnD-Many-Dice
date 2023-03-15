@@ -1,22 +1,42 @@
+
+
 body {
+    margin: 30px 0 0 0;
     background-image: url('images/bg-img.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#page {
+    margin: 0 20px;
     color: hotpink;
     text-shadow: 0 0 2px black;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-#title {
+#nums-to-display {
+    text-shadow: 0 0 2px black;
     background-image: url('images/stars.jpg');
     background-size: cover;
+    box-shadow: 0 0 10px rgb(10, 108, 255)
+}
+
+
+
+#title {
+    margin: 0;
+    background-image: url('images/stars.jpg');
+    font-size: 35px;
+    width: 550px;
+    text-align: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding: 7px 10px;
+    padding: 10px 10px;
     box-shadow: 0 0 10px rgb(10, 108, 255);
     text-shadow: 0 0 5px black;
-    
 }
 
 #hero {
@@ -41,6 +61,33 @@ body {
     
 }
 
+#for-checkbox-flex {
+    display: flex;
+    justify-content:space-between;
+}
+
+#label-and-box {
+    display: flex;
+    flex-direction: column;
+}
+
+#display-nums-container {
+    width: 550px;
+    margin: 60px 0 0 0;
+    color: hotpink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /* background: url('images/stars.jpg');
+    background-size: cover;
+    box-shadow: 0 0 10px rgb(10, 108, 255); */
+    padding: 5px 5px;
+}
+
+#display-nums-label {
+    text-shadow: 0 0 5px rgb(10, 108, 255);
+}
 
 p, label {
     font-size: 20px;
@@ -90,4 +137,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .rollEm:hover {
   transform: scale(1.2);
   transition: all .5s;
+}
+
+.border {
+    border: 2px dotted hotpink;
+}
+
+.blank {
+    width: 550px;
 }

@@ -5,33 +5,48 @@
         <link rel='stylesheet' href = 'index.css'>
     </head>
     <body>
-        <h1 id='title'>Welcome to DnD Many Dice Roller!</h1>
-        <div id="hero">
-            <div class="container">
-                <label for="amount-input">How many dice?</label>
-                <input class='numInputField' id="amount-input" type="number" value="0">
+        <div id="for-checkbox-flex">
+            <div class="blank"></div>
+            <div id="page">
+                <h1 id='title'>Welcome to DnD Many Dice Roller!</h1>
+                <div id="hero">
+                    <div class="container">
+                        <label for="amount-input">How many dice?</label>
+                        <input class='numInputField' id="amount-input" type="number" value="0">
+                    </div>
+                    <div class="container">
+                        <label for="sides">What type of dice? D</label>
+                        <input class='numInputField' id='sides' type="number" value="0">
+                    </div>
+                    <div class="container">
+                        <label for="dc">DC?</label>
+                        <input class='numInputField' id='dc' type="number" value="0">
+                    </div>
+                    <div class="container">
+                        <label for="mod-el">Modifier?</label>
+                        <input class="numInputField" id="mod-el" type="number" value="0">
+                    </div>
+                    <p id="dc-pass-el" class="container">This many passed: </p>
+                    <p id="dc-fail-el" class="container">This many failed: </p>
+                    <p id="crit-el" class="container">This many crit: </p>
+                    <p id="crit-fail-el" class="container">This many crit failed: </p>
+                    <div class="button">
+                        <button id="rollAll" class="rollEm">ROLL THE DICE!</button>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <label for="sides">What type of dice? D</label>
-                <input class='numInputField' id='sides' type="number" value="0">
-            </div>
-            <div class="container">
-                <label for="dc">DC?</label>
-                <input class='numInputField' id='dc' type="number" value="0">
-            </div>
-            <div class="container">
-                <label for="mod-el">Modifier?</label>
-                <input class="numInputField" id="mod-el" type="number" value="0">
+            <div id="display-nums-container">
+                <div id='label-and-box' class='container'>
+                    <label for id="display-nums-el" id="display-nums-label">Display Number Values? (after modifier)</label>
+                    <input name="display-nums-el" type="checkbox">
+                </div>
+                
+                <p id="nums-to-display" style="display:none"></p>
             </div>
             
-            <p id="dc-pass-el" class="container">This many passed: </p>
-            <p id="dc-fail-el" class="container">This many failed: </p>
-            <p id="crit-el" class="container">This many crit: </p>
-            <p id="crit-fail-el" class="container">This many crit failed: </p>
-            <div class="button">
-                <button id="rollAll" class="rollEm">ROLL THE DICE!</button>
-            </div>
         </div>
+        
+        
         <script src="index.js"></script>
     </body>
 </html>
