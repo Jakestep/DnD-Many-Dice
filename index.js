@@ -73,7 +73,22 @@ const pagestyle = document.getElementById('pagestyle')
 lameModeCheckbox.addEventListener('change', function() {
     if (lameModeCheckbox.checked == true) {
         pagestyle.setAttribute('href', 'lame.css')
+        document.getElementById('web-title').textContent = '*sigh*'
+
+        document.getElementById('head-tag').innerHTML = `
+        <link id='pagestyle' rel='stylesheet' href = 'lame.css'>
+        <title id="web-title">*sigh*</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon-images-lame/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-images-lame/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-images-lame/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">`
     } else {
-        pagestyle.setAttribute('href', 'index.css')
+        document.getElementById('head-tag').innerHTML = `
+        <link id='pagestyle' rel='stylesheet' href = 'index.css'>
+        <title id="web-title">DND Many Dice Roller</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon-images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">`
     }
 })
