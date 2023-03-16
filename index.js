@@ -28,27 +28,30 @@ function howManyPassed(times = 1, sides = 1, dc = 0, modifier = 0) {
     let didNotPass = 0;
     let crit = 0;
     let critFail = 0;
+    let Modifier = parseInt(modifier)
     for (let i = 0; i < times; i++) {
         let tempNum = Math.floor(Math.random()*sides) + 1;
         console.log(tempNum)
-        tempNum += parseInt(modifier)
-        numsString += `${tempNum} | `
-        if (tempNum >= dc) {
+        numsString += `${(tempNum + Modifier)} | `
+        if (tempNum == 1) {
+            critFail++
+        }
+        if (tempNum == 20) {
+            crit++
+        }
+        if (tempNum + Modifier >= dc) {
             didPass++;
-            if (tempNum == 20) {
-                crit++
-            }
+            
         } else {
             didNotPass++;
-            if (tempNum == 1) {
-                critFail ++
-            }
+            
         };
     };
+    console.log(critFail)
     dcPassEl.textContent = dcPassElInitial + didPass
     document.getElementById('dc-fail-el').textContent = `This many failed: ${didNotPass}`
-    document.getElementById('crit-el').textContent = `This many crit: ${crit}`
-    document.getElementById('crit-fail-el').textContent = `This many crit failed: ${critFail}`
+    document.getElementById('crit-el').textContent = `This many crit (roll = ${sides}): ${crit}`
+    document.getElementById('crit-fail-el').textContent = `This many crit failed (roll = 1): ${critFail}`
 }
 
 rollAll.addEventListener('click', function() {
@@ -62,5 +65,15 @@ displayNumsEl.addEventListener('change', function() {
         numsToDisplay.style.display = 'block'
     } else {
         numsToDisplay.style.display = 'none'
+    }
+})
+
+const lameModeCheckbox = document.querySelector('input[name="lame-mode"')
+const pagestyle = document.getElementById('pagestyle')
+lameModeCheckbox.addEventListener('change', function() {
+    if (lameModeCheckbox.checked == true) {
+        pagestyle.setAttribute('href', 'lame.css')
+    } else {
+        pagestyle.setAttribute('href', 'index.css')
     }
 })

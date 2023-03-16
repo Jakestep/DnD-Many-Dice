@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+.container {
+    margin: 10px;
+}
+
+#sigh {
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#lame-container {
+    text-align: left;
+}

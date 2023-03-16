@@ -1,6 +1,5 @@
-
-
 body {
+    height: 100;
     margin: 30px 0 0 0;
     background-image: url('images/bg-img.jpg');
     background-size: cover;
@@ -10,8 +9,7 @@ body {
 
 #page {
     margin: 0 20px;
-    color: hotpink;
-    text-shadow: 0 0 2px black;
+    color: #ff00a2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,11 +21,13 @@ body {
     background-size: cover;
     box-shadow: 0 0 10px rgb(10, 108, 255);
     padding: 5px;
+    border-radius: 7px;
 }
 
 
 
 #title {
+    border-radius: 7px;
     margin: 0 0 5px 0;
     background-image: url('images/stars.jpg');
     font-size: 35px;
@@ -49,6 +49,7 @@ body {
 }
 
 .container {
+    border-radius: 7px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,7 +76,7 @@ body {
 #display-nums-container {
     width: 550px;
     margin: 60px 10px 0 0;
-    color: hotpink;
+    color: #ff00a2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,18 +88,18 @@ body {
 }
 
 #display-nums-label {
-    text-shadow: 0 0 5px rgb(10, 108, 255);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
 p, label {
-    font-size: 20px;
+    font-size: 25px;
 }
 .numInputField {
     padding: 2px 5px 0 5px;
-    border: 2px solid hotpink;
+    border: 2px solid #ff00a2;
     background: none;
     background-blend-mode: lighten;
-    color: hotpink;
+    color: #ff00a2;
     font-size: 20px;
     width: 23px;
     height: 30px;
@@ -122,7 +123,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-image: url('images/stars.jpg');
     background-position: center;
     background-size: cover;
-    color: hotpink;
+    color: #ff00a2;
     border: 2px solid blue;
     border-radius: 50%;
     padding: 30px;
@@ -137,6 +138,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .rollEm:hover {
   transform: scale(1.2);
+  box-shadow: 0px 0px 100px #082e7a;
   transition: all .5s;
 }
 
@@ -146,4 +148,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .blank {
     width: 550px;
+}
+
+
+
+#sigh {
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#lame-label {
+    font-size: 15px;
+    color: grey;
 }
